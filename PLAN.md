@@ -14,9 +14,9 @@ Iowa Liquor Sales, Target dataset is a real-world dataset containing the transac
 
 ## Visualization Techniques
 
-1. ** Bar Chart: ** Which liqour categories generate the highest sales? Which Target stores purchase the most liqour? Which vendors supply the largest number of products? Which brands are most popular? Which counties or cities contribute the highest revenue?
-2. ** Line Graph: ** How do liqour sales vary by month or a year?
-3. ** Line chart: ** What are the seasonal trends in liqour sales?
-4. ** Scatter plot: ** How does bottle size affect sales? 
-5. ** Correlation matrix **
-6. ** Histogram **
+1. **Bar Chart:** Which liqour categories generate the highest sales? Which Target stores purchase the most liqour? Which vendors supply the largest number of products? Which brands are most popular? Which counties or cities contribute the highest revenue?
+2. **Line Graph:** How do liqour sales vary by month or a year?
+3. **Line chart:** What are the seasonal trends in liqour sales?
+4. **Scatter plot:** How does bottle size affect sales? 
+5. **Correlation matrix**
+6. **Histogram**
