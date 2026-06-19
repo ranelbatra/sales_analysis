@@ -1,7 +1,7 @@
 # Sales analysis of Iowa Liquor Sales, Target
 
 Iowa Liquor Sales, Target dataset is a real-world dataset containing the transaction records of liqour purchases made by Target stores in Iowa.
-* This dataset contains 24 attributes including transaction information, store information, product information, vendor information, pricing information, and sales information. It contains the record of 224201 sales made from January 1, 2012 till May 30, 2026. *
+*This dataset contains 24 attributes including transaction information, store information, product information, vendor information, pricing information, and sales information. It contains the record of 224201 sales made from January 1, 2012 till May 30, 2026.*
 
 ## Types of Analysis that can be performed on the dataset
 
@@ -18,5 +18,6 @@ Iowa Liquor Sales, Target dataset is a real-world dataset containing the transac
 2. **Line Graph:** How do liqour sales vary by month or a year?
 3. **Line chart:** What are the seasonal trends in liqour sales?
 4. **Scatter plot:** How does bottle size affect sales? 
-5. **Correlation matrix**
-6. **Histogram**
+5. **Heatmap:** What is the Correlation between numeric features?
+6. **Histogram:** What is the distribution of bottles sold per transaction?
+7. **Box plot:** What is the Distribution of bottle sale prices?
