@@ -339,3 +339,8 @@ print(df.groupby('item_no')['pack'].value_counts())
 pack_map=df.groupby('item_no')['pack'].first()
 df['pack']=df['pack'].fillna(df['item_no'].map(pack_map))
 print(df.isnull().sum())
+
+print(df['ordered_on'].head(15))
+df['ordered_on']=df['ordered_on'].str.strip().str.replace('/', '-', regex=True)
+df['ordered_on']=pd.to_datetime(df['ordered_on'], errors='coerce')
+print(df['ordered_on'].head(15))
