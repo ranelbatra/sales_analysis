@@ -344,3 +344,5 @@ print(df['ordered_on'].head(15))
 df['ordered_on']=df['ordered_on'].str.strip().str.replace('/', '-', regex=True)
 df['ordered_on']=pd.to_datetime(df['ordered_on'], errors='coerce')
 print(df['ordered_on'].head(15))
+
+df.to_csv('C:\\Users\\japnoor.kaur\\Desktop\\sales_analysis\\data\\clean_output.csv', index=False)
