@@ -2,6 +2,25 @@ import numpy as np
 import pandas as pd
 df=pd.read_csv('C:\\Users\\japnoor.kaur\\Desktop\\sales_analysis\\data\\iowa_liquor_sales_target_raw.csv')
 
+def validate_data(df):
+    print("Dataset Shape:", df.shape)
+    print("\nData Types:")
+    print(df.dtypes)
+
+    print("\nSummary Statistics:")
+    print(df.describe())
+
+    print("\nMissing Values:")
+    print(df.isnull().sum())
+
+    print("\nUnique Invoice IDs:")
+    print(df['invoice_id'].nunique())
+
+    print("\nMissing Vendor Numbers:")
+    print(df[df['vendor_number'].isnull()])
+
+    return df
+
 df=df.dropna(subset=['invoice_id'], how='all')
 
 df=df.drop_duplicates(subset='invoice_id')
@@ -345,4 +364,33 @@ df['ordered_on']=df['ordered_on'].str.strip().str.replace('/', '-', regex=True)
 df['ordered_on']=pd.to_datetime(df['ordered_on'], errors='coerce')
 print(df['ordered_on'].head(15))
 
-df.to_csv('C:\\Users\\japnoor.kaur\\Desktop\\sales_analysis\\data\\clean_output.csv', index=False)
+df['store_no']=pd.to_numeric(df['store_no'], errors='coerce')
+df['store_no']=df['store_no'].abs()
+df['store_zip_code']=pd.to_numeric(df['store_zip_code'], errors='coerce')
+df['store_zip_code']=df['store_zip_code'].abs()
+df['county_fips_code']=pd.to_numeric(df['county_fips_code'], errors='coerce')
+df['county_fips_code']=df['county_fips_code'].abs()
+df['vendor_number']=pd.to_numeric(df['vendor_number'], errors='coerce')
+df['vendor_number']=df['vendor_number'].abs()
+df['item_no']=pd.to_numeric(df['item_no'], errors='coerce')
+df['item_no']=df['item_no'].abs()
+df['pack']=pd.to_numeric(df['pack'], errors='coerce')
+df['pack']=df['pack'].abs()
+df['bottle_volume_ml']=pd.to_numeric(df['bottle_volume_ml'], errors='coerce')
+df['bottle_volume_ml']=df['bottle_volume_ml'].abs()
+df['sales_bottles']=pd.to_numeric(df['sales_bottles'], errors='coerce')
+df['sales_bottles']=df['sales_bottles'].abs()
+df['sales_dollars']=pd.to_numeric(df['sales_dollars'], errors='coerce')
+df['sales_dollars']=df['sales_dollars'].abs()
+df['sales_liters']=pd.to_numeric(df['sales_liters'], errors='coerce')
+df['sales_liters']=df['sales_liters'].abs()
+df['sales_gallons']=pd.to_numeric(df['sales_gallons'], errors='coerce')
+df['sales_gallons']=df['sales_gallons'].abs()
+
+print(df.iloc[4089, 17])
+
+df.to_csv(
+    r"C:\Users\japnoor.kaur\Desktop\sales_analysis\data\clean_output.csv",
+    index=False
+)
+
